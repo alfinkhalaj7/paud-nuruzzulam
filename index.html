@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PAUD Nuruzzulam | Pendidikan Anak Usia Dini Berkualitas</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:ital,wght@0,600;1,500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --oren:       #F57C00;
+  --oren-muda:  #FFF3E0;
+  --oren-tua:   #BF360C;
+  --kuning:     #FDD835;
+  --kuning-muda:#FFFDE7;
+  --hijau:      #2E7D32;
+  --hijau-muda: #E8F5E9;
+  --hijau-med:  #43A047;
+  --putih:      #ffffff;
+  --krem:       #FFFEF5;
+  --abu:        #5D4037;
+  --abu-teks:   #5D4037;
+  --teks:       #212121;
+  --shadow:     0 4px 20px rgba(0,0,0,0.10);
+  --radius:     16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Nunito',sans-serif;background:var(--krem);color:var(--teks);overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+
+/* ================= NAVBAR ================= */
+.nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  padding: 20px 5% 10px 5%; 
+  background: var(--krem);
+  width: 100%;
+}
+nav {
+  position: relative;
+  background: linear-gradient(90deg, #F57C00 0%, #FDD835 45%, #43A047 100%);
+  border-radius: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 55px;
+  padding: 0 20px 0 85px; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  max-width: 1350px; 
+  margin: 0 auto;
+}
+.logo-outer-circle {
+  position: absolute;
+  left: -10px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;  
+  height: 80px; 
+  background: #F57C00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.logo-outer-circle img {
+  width: 70px;  
+  height: 70px; 
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+.nav-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  width: 100%;
+  justify-content: space-around; 
+}
+.nav-links a {
+  padding: 6px 12px; 
+  font-size: 15px;    
+  font-weight: 800;
+  color: #ffffff;
+  transition: all .2s;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2); 
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 20;
+}
+.hamburger span { width: 24px; height: 2.5px; background: #fff; border-radius: 2px; transition: .3s; }
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 85px; left: 5%; right: 5%;
+  background: linear-gradient(180deg, var(--oren) 0%, var(--hijau) 100%);
+  padding: 16px 24px 24px; z-index: 199;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+.mobile-menu a { padding: 13px 0; font-size: 15px; font-weight: 700; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.15); display: block; text-align: center; }
+.mobile-menu a:last-child { border: none; color: var(--kuning); }
+
+@media(max-width:992px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  nav { justify-content: flex-end; padding-left: 40px; }
+  .nav-container { padding: 15px 5% 5px 5%; }
+}
+
+/* ================= HERO LAYOUT ================= */
+.hero{
+  min-height: calc(100vh - 100px); 
+  background:linear-gradient(145deg,#FFFDE7 0%,#FFF8E1 35%,#F1F8E9 70%,#E8F5E9 100%);
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 20px 5% 35px; 
+  position:relative;
+  overflow:hidden;
+  gap: 30px;
+}
+.hero-blob1{position:absolute;top:-100px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(253,216,53,0.35) 0%,rgba(245,124,0,0.15) 60%,transparent 80%);pointer-events:none;}
+.hero-blob2{position:absolute;bottom:-80px;left:-60px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(67,160,71,0.2) 0%,transparent 70%);pointer-events:none;}
+.hero-blob3{position:absolute;bottom:80px;right:20%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(245,124,0,0.2) 0%,transparent 70%);pointer-events:none;}
+
+.hero-content{
+  max-width: 580px;
+  position:relative;
+  z-index:1;
+  flex: 1;
+}
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+}
+.hero-image-container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  animation: floatAnim 4s ease-in-out infinite; 
+}
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(90deg,var(--oren),var(--kuning));
+  color:#fff;padding:6px 16px;border-radius:30px;
+  font-size:13px;font-weight:800;margin-bottom:12px; 
+  box-shadow:0 3px 10px rgba(245,124,0,0.3);
+}
+h1{font-size:clamp(28px,4.5vw,48px);font-weight:900;line-height:1.1;color:var(--hijau);margin-bottom:10px;}
+h1 .welcome{display:block;font-size:clamp(15px,2vw,20px);font-weight:700;color:var(--oren);margin-bottom:4px;}
+h1 .brand{color:var(--hijau);text-shadow:2px 2px 0 rgba(46,125,50,0.12);}
+.hero p{font-size:15px;line-height:1.65;color:var(--abu-teks);margin-bottom:25px;max-width:480px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{background:linear-gradient(135deg,var(--oren),#E65100);color:#fff;padding:12px 24px;border-radius:40px;font-weight:800;font-size:14px;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 16px rgba(245,124,0,0.4);border:none;cursor:pointer;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,124,0,0.5);}
+.btn-outline{border:2.5px solid var(--hijau);color:var(--hijau);padding:10px 24px;border-radius:40px;font-weight:800;font-size:14px;background:rgba(255,255,255,0.7);transition:all .2s;}
+.btn-outline:hover{background:var(--hijau);color:#fff;}
+
+/* =============== BADGE AKREDITASI RESMI (ANIMASI HIJAU-KUNING) =============== */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+.stat-badge {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 60px;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(45deg, #2E7D32, #43A047, #FDD835, #F57C00);
+  background-size: 300% 300%;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(46, 125, 50, 0.6), 0 4px 15px rgba(0,0,0,0.2);
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: shine-gradient 4s ease infinite;
+  text-align: center;
+  backdrop-filter: blur(2px);
+}
+.stat-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(253, 216, 53, 0.8), 0 6px 20px rgba(0,0,0,0.25);
+}
+@keyframes shine-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media(max-width: 850px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+    gap: 40px;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+  }
+  .hero-image-container {
+    max-width: 380px;
+    width: 100%;
+  }
+  .stat-badge {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+}
+
+/* SECTION BASE */
+section{padding:80px 5%;}
+.section-label{display:inline-block;background:linear-gradient(90deg,var(--oren),var(--kuning));color:#fff;padding:5px 16px;border-radius:20px;font-size:12px;font-weight:800;letter-spacing:.5px;margin-bottom:12px;text-transform:uppercase;box-shadow:0 2px 8px rgba(245,124,0,0.25);}
+h2{font-size:clamp(22px,3.5vw,36px);font-weight:900;color:var(--hijau);line-height:1.2;margin-bottom:10px;}
+.section-sub {font-size:16px;color:var(--abu-teks);line-height:1.7;max-width:560px;margin-bottom:44px;}
+.text-center-sub { text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
+
+/* TENTANG KAMI */
+#tentang{background:var(--putih);}
+.tentang-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.tentang-visual{border-radius:24px;padding:30px 24px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;background:linear-gradient(145deg,#FFF8E1,#E8F5E9);border:2px solid rgba(253,216,53,0.4);}
+.tentang-visual::after{content:'🌱';position:absolute;bottom:12px;right:20px;font-size:72px;opacity:.1;pointer-events:none;}
+.visi-misi{background:var(--putih);border-radius:14px;padding:18px 22px;border-left:4px solid var(--oren);box-shadow: 0 2px 10px rgba(0,0,0,0.02);}
+.visi-misi.misi{border-color:var(--hijau);}
+.visi-misi h4{font-size:13px;font-weight:800;color:var(--oren);margin-bottom:7px;text-transform:uppercase;letter-spacing: 0.5px;}
+.visi-misi.misi h4{color:var(--hijau);}
+.visi-misi p{font-size:14px;line-height:1.6;color:var(--teks);font-weight: 700;}
+.visi-misi ul {list-style: none; margin-top: 5px;}
+.visi-misi ul li {font-size: 13.5px; line-height: 1.5; color: var(--abu-teks); margin-bottom: 6px; position: relative; padding-left: 14px;}
+.visi-misi ul li::before {content: "•"; color: var(--hijau); font-weight: bold; position: absolute; left: 0;}
+.nilai-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px;}
+.nilai-tag{background:linear-gradient(135deg,var(--hijau),var(--hijau-med));color:#fff;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;}
+.tentang-text p{font-size:15px;line-height:1.8;color:var(--abu-teks);margin-bottom:14px;}
+.info-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.info-card{background:var(--krem);border:1.5px solid rgba(253,216,53,0.5);border-radius:14px;padding:14px;border-top:3px solid var(--oren);}
+.info-card .ic-icon{font-size:22px;margin-bottom:6px;}
+.info-card h5{font-size:11px;font-weight:800;color:var(--oren);margin-bottom:3px;text-transform:uppercase;}
+.info-card p{font-size:13px;font-weight:700;color:var(--teks);line-height: 1.4;}
+
+/* PROGRAM */
+#program{background:linear-gradient(160deg,#E8F5E9 0%,#FFFDE7 100%);}
+.program-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:22px;}
+.program-card{background:var(--putih);border-radius:20px;padding:26px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;border-top:4px solid var(--oren);position:relative;overflow:hidden;}
+.program-card::after{content:'';position:absolute;top:-30px;right:-30px;width:80px;height:80px;border-radius:50%;background:rgba(253,216,53,0.15);}
+.program-card:nth-child(even){border-color:var(--hijau);}
+.program-card:nth-child(3n){border-color:var(--kuning);}
+.program-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,0.12);}
+.pc-icon{font-size:38px;margin-bottom:14px;display:block;}
+.program-card h3{font-size:16px;font-weight:800;color:var(--teks);margin-bottom:8px;}
+.program-card p{font-size:13px;line-height:1.6;color:var(--abu-teks);margin-bottom:12px;}
+.program-ornament-bar { display: flex; align-items: center; gap: 6px; margin-top: 15px; padding-top: 10px; border-top: 1px dashed rgba(0,0,0,0.06); }
+.ornament-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--oren); }
+.ornament-dot:nth-child(2) { background: var(--kuning); width: 14px; border-radius: 10px; }
+.ornament-dot:nth-child(3) { background: var(--hijau-med); }
+.program-card:nth-child(even) .ornament-dot { background: var(--hijau-med); }
+.program-card:nth-child(even) .ornament-dot:nth-child(2) { background: var(--kuning); }
+.program-card:nth-child(even) .ornament-dot:nth-child(3) { background: var(--oren); }
+
+/* CAROUSEL */
+#dokumentasi { background: var(--putih); text-align: center; position: relative; }
+.carousel-view-container { max-width: 1100px; margin: 0 auto; position: relative; height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.cards-slide-item { position: absolute; width: 520px; height: 330px; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); z-index: 0; opacity: 0; transform: translateX(0) scale(0.6); pointer-events: none; }
+.cards-slide-item img { width: 100%; height: 100%; object-fit: cover; }
+.cards-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); color: #fff; padding: 25px 20px 15px 20px; font-size: 15px; font-weight: 700; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); opacity: 0; transition: opacity 0.3s ease; }
+.cards-slide-item.focus-center { z-index: 3; opacity: 1; transform: translateX(0) scale(1); border: 4px solid var(--oren); pointer-events: auto; }
+.cards-slide-item.focus-center .cards-caption { opacity: 1; }
+.cards-slide-item.look-left { z-index: 1; opacity: 0.5; transform: translateX(-320px) scale(0.78); cursor: pointer; pointer-events: auto; }
+.cards-slide-item.look-right { z-index: 1; opacity: 0.5; transform: translateX(320px) scale(0.78); cursor: pointer; pointer-events: auto; }
+.carousel-controls-panel { display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 20px; }
+.arrow-nav-btn { background: var(--oren); color: #fff; border: none; width: 45px; height: 45px; border-radius: 50%; font-size: 20px; font-weight: 900; cursor: pointer; box-shadow: 0 4px 10px rgba(245,124,0,0.3); transition: all 0.2s; display: flex; align-items: center; justify-content: center; }
+.arrow-nav-btn:hover { background: var(--oren-tua); transform: scale(1.1); }
+@media(max-width: 768px) { .carousel-view-container { height: 290px; } .cards-slide-item { width: 80%; height: 220px; } .cards-slide-item.look-left { transform: translateX(-22%) scale(0.8); opacity: 0.25; } .cards-slide-item.look-right { transform: translateX(22%) scale(0.8); opacity: 0.25; } .cards-caption { font-size: 11px; padding: 10px; } }
+
+/* FASILITAS */
+#fasilitas{background:var(--krem);}
+.fasilitas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:18px;}
+.fas-card{ background:var(--putih); border:1.5px solid rgba(253,216,53,0.4); border-radius:18px; padding:24px 18px; text-align: center; transition:box-shadow .2s,transform .2s; border-bottom:3px solid var(--hijau-med); }
+.fas-card:nth-child(even){border-bottom-color:var(--oren);}
+.fas-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
+.fas-icon{font-size:38px;margin-bottom:10px;display:block;text-align:center;}
+.fas-card h4{font-size:14px;font-weight:800;color:var(--teks);margin-bottom:5px;}
+.fas-card p{font-size:12px;color:var(--abu-teks);line-height:1.5;}
+
+/* PENDAFTARAN */
+#pendaftaran{background:linear-gradient(150deg,#FFF8E1 0%,#E8F5E9 100%);}
+.daftar-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+.syarat-box{background:var(--putih);border-radius:20px;padding:30px;box-shadow:var(--shadow);border-top:4px solid var(--oren);}
+.syarat-box h3{font-size:19px;font-weight:900;margin-bottom:18px;color:var(--teks);}
+.syarat-item{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid #f5f5f5;}
+.syarat-item:last-of-type{border:none;}
+.syarat-num{width:30px;height:30px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--oren),var(--kuning));color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.syarat-item div h5{font-size:14px;font-weight:800;margin-bottom:3px;color:var(--teks);}
+.syarat-item div p{font-size:12px;color:var(--abu-teks);}
+.info-note{background:var(--kuning-muda);border-left:4px solid var(--kuning);border-radius:8px;padding:12px 16px;margin-top:14px;font-size:13px;color:#5D4037;line-height:1.5;}
+.daftar-cta{background:var(--putih);border-radius:20px;padding:30px;box-shadow:var(--shadow);border-top:4px solid var(--hijau);display:flex;flex-direction:column;gap:18px;}
+.daftar-cta h3{font-size:19px;font-weight:900;color:var(--teks);}
+.daftar-cta>div>p{font-size:14px;line-height:1.7;color:var(--abu-teks);}
+.cta-cara{background:linear-gradient(135deg,var(--hijau-muda),var(--oren-muda));border-radius:14px;padding:18px 20px;}
+.cta-cara h4{font-size:13px;font-weight:800;color:var(--hijau);margin-bottom:13px;text-transform:uppercase;}
+.cta-langkah{display:flex;align-items:flex-start;gap:11px;margin-bottom:11px;}
+.cta-langkah:last-child{margin-bottom:0;}
+.cl-num{width:26px;height:26px;border-radius:50%;flex-shrink:0;background:var(--hijau);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.cta-langkah p{font-size:13px;color:var(--teks);line-height:1.5;font-weight:600;}
+.cta-btns{display:flex;flex-direction:column;gap:10px;}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;padding:14px 20px;border-radius:12px;font-weight:800;font-size:14px;transition:opacity .2s;}
+.btn-wa:hover{opacity:.88;}
+.btn-datang{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--oren),#E65100);color:#fff;padding:14px 20px;border-radius:12px;font-weight:800;font-size:14px;transition:opacity .2s;}
+.btn-datang:hover{opacity:.88;}
+
+/* KONTAK */
+#kontak{background:linear-gradient(135deg,var(--hijau) 0%,var(--hijau-med) 50%,var(--oren) 100%);color:#fff;}
+#kontak .section-label{background:rgba(255,255,255,0.2);box-shadow:none;}
+#kontak h2{color:#fff;}
+#kontak .section-sub{color:rgba(255,255,255,0.8);}
+.kontak-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;}
+.kontak-item{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:22px;text-align:center;transition:background .2s;}
+.kontak-item:hover{background:rgba(255,255,255,0.2);}
+.kontak-item .k-icon{font-size:30px;margin-bottom:10px;display:block;}
+.kontak-item h5{font-size:11px;font-weight:800;color:var(--kuning);margin-bottom:5px;text-transform:uppercase;}
+.kontak-item p{font-size:14px;font-weight:700;color:#fff;line-height:1.5;}
+
+/* FOOTER */
+footer {background:#1B5E20;color:rgba(255,255,255,0.7);text-align:center;padding:22px 5%;font-size:13px;}
+footer strong{color:#fff;}
+footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuning),var(--oren));border-radius:2px;margin:0 auto 12px;}
+
+@media(max-width:768px){
+  .tentang-grid,.daftar-wrapper{grid-template-columns:1fr;}
+  .info-cards{grid-template-columns:1fr 1fr;}
+  section{padding:60px 5%;}
+}
+@media(max-width:480px){.info-cards{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="nav-container">
+  <nav>
+    <div class="logo-outer-circle">
+      <img src="logo.png" alt="Logo PAUD Nuruzzulam" onerror="this.style.display='none'; this.parentElement.innerHTML='🌱';">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#tentang">Tentang Kami</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#dokumentasi">Dokumentasi</a></li>
+      <li><a href="#fasilitas">Fasilitas</a></li>
+      <li><a href="#pendaftaran">Pendaftaran</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#tentang" onclick="toggleMenu()">Tentang Kami</a>
+  <a href="#program" onclick="toggleMenu()">Program</a>
+  <a href="#dokumentasi" onclick="toggleMenu()">Dokumentasi</a>
+  <a href="#fasilitas" onclick="toggleMenu()">Fasilitas</a>
+  <a href="#pendaftaran" onclick="toggleMenu()">Pendaftaran</a>
+  <a href="#kontak" onclick="toggleMenu()">Kontak</a>
+</div>
+
+<section class="hero">
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-blob3"></div>
+  
+  <div class="hero-content">
+    <div class="hero-badge">🌟 Penerimaan Murid Baru 2025/2026</div>
+    <h1>
+      <span class="welcome">Selamat Datang di</span>
+      <span class="brand">PAUD<br>NURUZZULAM</span>
+    </h1>
+    <p>Lembaga pendidikan anak usia dini berbasis islami yang membimbing si kecil tumbuh cerdas, berkarakter, and bahagia sejak dini.</p>
+    <div class="hero-btns">
+      <a href="#pendaftaran" class="btn-primary">Daftar Sekarang 🎉</a>
+      <a href="#program" class="btn-outline">Lihat Program</a>
+    </div>
+    <div class="hero-stats">
+      <!-- Badge Akreditasi Resmi dengan animasi gradasi hijau-kuning -->
+      <div class="stat-badge">TERAKREDITASI RESMI</div>
+    </div>
+  </div>
+
+  <div class="hero-image-container">
+    <img src="hero-anak.png" alt="Siswa PAUD Nuruzzulam" onerror="this.style.display='none';">
+  </div>
+</section>
+
+<section id="tentang">
+  <div class="tentang-grid">
+    <div class="tentang-visual">
+      <div class="visi-misi">
+        <h4>🎯 Visi Asli</h4>
+        <p>MEMBENTUK ANAK YANG CERDAS, BAIK DAN TERAMPIL BERAKHLAK MULIA, SEHINGGA TERWUJUD ANAK YANG KREATIF DAN MANDIRI.</p>
+      </div>
+      <div class="visi-misi misi">
+        <h4>🚀 Misi Asli</h4>
+        <ul>
+          <li>Melaksanakan pembelajaran aktif, kreatif, efektif dan inovatif.</li>
+          <li>Meningkatkan pelayanan dan pemerataan akses layanan PAUD melalui penyelenggara yang mudah, dan murah, tetapi bermutu.</li>
+          <li>Menciptakan suasana belajar yang nyaman dan menyenangkan agar anak mencapai prestasi yang optimal.</li>
+          <li>Menumbuhkan semangat belajar sosial dan agama.</li>
+          <li>Menanamkan sopan santun dan tata krama.</li>
+          <li>Mendorong dan membantu setiap peserta didik untuk mengenal potensi dirinya sehingga dapat dikembangkan secara Optimal.</li>
+          <li>Memberikan informasi pada masyarakat dan orang tua tentang pendidikan anak usia dini.</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-size:13px;font-weight:800;color:var(--oren);margin-bottom:8px;text-transform:uppercase;">Nilai-Nilai Kami</p>
+        <div class="nilai-list">
+          <span class="nilai-tag">Islami</span>
+          <span class="nilai-tag">Kreatif</span>
+          <span class="nilai-tag">Kasih Sayang</span>
+          <span class="nilai-tag">Menyenangkan</span>
+          <span class="nilai-tag">Holistik</span>
+        </div>
+      </div>
+    </div>
+    <div class="tentang-text">
+      <div class="section-label">Tentang Kami</div>
+      <h2>Mengenal PAUD Nuruzzulam</h2>
+      <p>PAUD Nuruzzulam adalah lembaga pendidikan anak usia dini resmi yang berkomitmen memberikan pendidikan awal berkualitas tinggi berbasis nilai-nilai islami. Dengan pengalaman lebih dari 6 tahun, kami terus berinovasi dalam metode pembelajaran yang menyenangkan dan penuh kasih sayang.</p>
+      <p>Kami percaya bahwa setiap anak adalah cahaya benderang yang perlu dibimbing dengan penuh kasih sayang. Dengan mengedepankan atmosfer belajar yang murah, bermutu, and menyenangkan, kami berkomitmen membantu setiap peserta didik mengoptimalkan potensi dirinya.</p>
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="ic-icon">📍</div>
+          <h5>Alamat</h5>
+          <p>Kp. Panggang, Ds. Slapajang, Kec. Cisoka, Kab. Tangerang, Banten 15730</p>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon">🕐</div>
+          <h5>Jam Belajar</h5>
+          <p>Senin–Jumat, 08.00–10.00 WIB</p>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon">📞</div>
+          <h5>Telepon</h5>
+          <p>0895-3795-20899</p>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon">🎓</div>
+          <h5>Akreditasi</h5>
+          <p>Terakreditasi Resmi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="program">
+  <div class="section-label">Program Kami</div>
+  <h2>Apa yang Kami Ajarkan?</h2>
+  <p class="section-sub">Program kami dirancang untuk mengembangkan potensi anak secara menyeluruh — dari kecerdasan kognitif, emosional, hingga spiritual.</p>
+  <div class="program-grid">
+    <div class="program-card"><span class="pc-icon">📖</span><h3>Al-Qur'an &amp; Doa Harian</h3><p>Pengenalan huruf hijaiyah, hafalan surat-surat pendek, serta doa-doa harian esensial dasar.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><span class="pc-icon">🎨</span><h3>Kreativitas &amp; Seni</h3><p>Menggambar, mewarnai, kerajinan tangan, and berbagai kegiatan seni tangan yang merangsang imajinasi.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><span class="pc-icon">🔤</span><h3>Calistung Dasar</h3><p>Belajar membaca, menulis, and berhitung secara menyenangkan sebagai bekal persiapan masuk SD.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><span class="pc-icon">🏃</span><h3>Motorik &amp; Olahraga</h3><p>Senam pagi, permainan outdoor, and aktivitas fisik interaktif yang melatih kelenturan tubuh.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><span class="pc-icon">🤝</span><h3>Sosial &amp; Karakter</h3><p>Membangun nilai-nilai kebaikan adab, sopan santun, percaya diri, and keluwesan bersosialisasi.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><span class="pc-icon">🔬</span><h3>Sains &amp; Eksplorasi</h3><p>Mengenal alam sekitar melalui metode percobaan eksperimen ilmiah sederhana yang seru.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><span class="pc-icon">🎵</span><h3>Kelas Seni Musik</h3><p>Mengenalkan berbagai macam lagu anak-anak edukatif serta pengenalan ketukan ritme alat musik sederhana.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><span class="pc-icon">🍳</span><h3>Fun Cooking (Masak)</h3><p>Menumbuhkan motorik halus agar mandiri meracik menu makanan / minuman sehat konsumsi harian secara sederhana.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+  </div>
+</section>
+
+<section id="dokumentasi">
+  <div class="section-label">Dokumentasi</div>
+  <h2>Keseruan Kegiatan di PAUD</h2>
+  <p class="section-sub text-center-sub">Intip yuk berbagai momen keceriaan, belajar, dan eksplorasi seru siswa-siswi PAUD Nuruzzulam!</p>
+  <div class="carousel-view-container">
+    <div class="cards-slide-item" onclick="clickToSlide(0)"><img src="kelas.png" alt="Belajar di Kelas" onerror="this.src='https://placehold.co/850x480?text=Suasana+Belajar+di+Kelas';"><div class="cards-caption">📝 Aktivitas Belajar di Kelas yang Interaktif dan Menyenangkan</div></div>
+    <div class="cards-slide-item" onclick="clickToSlide(1)"><img src="senam.png" alt="Senam Pagi" onerror="this.src='https://placehold.co/850x480?text=Senam+Pagi+Ceria';"><div class="cards-caption">🏃 Senam Pagi Ceria Menjaga Kebugaran Tubuh Si Kecil</div></div>
+    <div class="cards-slide-item" onclick="clickToSlide(2)"><img src="gedung-lapangan.png" alt="Gedung Sekolah dan Lapangan" onerror="this.src='https://placehold.co/850x480?text=Gedung+Sekolah+dan+Lapangan';"><div class="cards-caption">🏫 Fasilitas Gedung Sekolah dan Lapangan Luas yang Nyaman</div></div>
+    <div class="cards-slide-item" onclick="clickToSlide(3)"><img src="kelulusan.png" alt="Wisuda Kelulusan" onerror="this.src='https://placehold.co/850x480?text=Wisuda+Kelulusan+PAUD';"><div class="cards-caption">🎓 Momen Wisuda Kelulusan, Kebanggaan Orang Tua dan Guru</div></div>
+    <div class="cards-slide-item" onclick="clickToSlide(4)"><img src="menari.png" alt="Kegiatan Menari" onerror="this.src='https://placehold.co/850x480?text=Kegiatan+Menari+Bersama';"><div class="cards-caption">💃 Kegiatan Menari, Ekspresi Seni dan Kegembiraan Anak</div></div>
+  </div>
+  <div class="carousel-controls-panel"><button class="arrow-nav-btn" onclick="prevSlide()">&lt;</button><button class="arrow-nav-btn" onclick="nextSlide()">&gt;</button></div>
+</section>
+
+<section id="fasilitas">
+  <div class="section-label">Fasilitas</div>
+  <h2>Sarana &amp; Prasarana</h2>
+  <p class="section-sub">Kami menyediakan lingkungan belajar yang aman, nyaman, bersih, and menyenangkan untuk mendukung tumbuh kembang si kecil.</p>
+  <div class="fasilitas-grid">
+    <div class="fas-card"><span class="fas-icon">✨</span><h4>Ruang Kelas Luas</h4><p>Ruang belajar yang luas, ber-AC, bersih, and didekorasi ceria agar anak nyaman bergerak.</p></div>
+    <div class="fas-card"><span class="fas-icon">🛝</span><h4>Area Bermain Outdoor</h4><p>Taman bermain luar ruangan dengan berbagai permainan edukatif yang aman.</p></div>
+    <div class="fas-card"><span class="fas-icon">📚</span><h4>Perpustakaan Mini</h4><p>Koleksi buku cerita, buku ilmu pengetahuan, and media belajar menarik.</p></div>
+    <div class="fas-card"><span class="fas-icon">🕌</span><h4>Mushola</h4><p>Tempat ibadah yang bersih untuk pembiasaan shalat and mengaji.</p></div>
+    <div class="fas-card"><span class="fas-icon">🛍️</span><h4>Jajanan Anak &amp; Alat Tulis</h4><p>Menyediakan camilan sehat bergizi and kebutuhan alat tulis harian siswa secara praktis.</p></div>
+    <div class="fas-card"><span class="fas-icon">🚿</span><h4>Toilet Ramah Anak</h4><p>Toilet khusus anak-anak yang bersih, aman, and mudah digunakan.</p></div>
+    <div class="fas-card"><span class="fas-icon">🎭</span><h4>Panggung Pentas Seni</h4><p>Fasilitas panggung ekspresi mandiri untuk melatih bakat, kreativitas, and rasa percaya diri anak.</p></div>
+    <div class="fas-card"><span class="fas-icon">🛡️</span><h4>Lingkungan Aman &amp; Tenang</h4><p>Area sekolah asri and jauh dari jalan raya utama, menjamin kenyamanan and keselamatan anak.</p></div>
+    <div class="fas-card"><span class="fas-icon">🚗</span><h4>Halaman &amp; Parkir Luas</h4><p>Area halaman and tempat parkir kendaraan yang sangat luas untuk kenyamanan antar-jemput.</p></div>
+  </div>
+</section>
+
+<section id="pendaftaran">
+  <div class="section-label">Pendaftaran</div>
+  <h2>Cara Mendaftar</h2>
+  <p class="section-sub">Siapkan dokumen persyaratan di bawah ini, lalu datang langsung ke sekolah atau hubungi admin kami untuk informasi lebih lanjut.</p>
+  <div class="daftar-wrapper">
+    <div class="syarat-box">
+      <h3>📋 Syarat Pendaftaran</h3>
+      <div class="syarat-item"><div class="syarat-num">1</div><div><h5>Fotokopi Kartu Keluarga (KK)</h5><p>Fotokopi yang masih jelas and terbaca, 1 lembar.</p></div></div>
+      <div class="syarat-item"><div class="syarat-num">2</div><div><h5>Fotokopi KTP Orang Tua/Wali</h5><p>KTP ayah and ibu/wali yang masih berlaku, masing-masing 1 lembar.</p></div></div>
+      <div class="syarat-item"><div class="syarat-num">3</div><div><h5>Fotokopi Akta Kelahiran Anak</h5><p>Akta kelahiran asli untuk ditunjukkan, fotokopi 1 lembar.</p></div></div>
+      <div class="info-note">💡 <strong>Catatan:</strong> Semua berkas asli harap dibawa saat datang ke sekolah untuk proses verifikasi dokumen.</div>
+    </div>
+    <div class="daftar-cta">
+      <div><h3>🏫 Selanjutnya, Apa yang Harus Dilakukan?</h3><p>Setelah menyiapkan dokumen di samping, Anda bisa langsung datang ke sekolah atau menghubungi admin kami terlebih dahulu untuk konfirmasi jadwal pendaftaran.</p></div>
+      <div class="cta-cara"><h4>📌 Langkah Pendaftaran</h4>
+        <div class="cta-langkah"><div class="cl-num">1</div><p>Siapkan semua dokumen persyaratan yang tertera di sebelah kiri.</p></div>
+        <div class="cta-langkah"><div class="cl-num">2</div><p>Hubungi admin sekolah via WhatsApp atau telepon untuk konfirmasi jadwal.</p></div>
+        <div class="cta-langkah"><div class="cl-num">3</div><p>Datang langsung ke sekolah pada jadwal yang telah disepakati.</p></div>
+        <div class="cta-langkah"><div class="cl-num">4</div><p>Serahkan berkas and isi formulir pendaftaran di kantor sekolah.</p></div>
+      </div>
+      <div class="cta-btns">
+        <a href="https://wa.me/62895379520899" class="btn-wa" target="_blank"><span style="font-size:20px;">💬</span> Hubungi Admin via WhatsApp</a>
+        <a href="https://maps.app.goo.gl/T2A3BguCbkbLsP21A?g_st=aw" class="btn-datang" target="_blank"><span style="font-size:20px;">🏫</span> Lihat Lokasi Sekolah</a>
+      </div>
+      <div class="info-note">💡 <strong>Jam Pendaftaran:</strong> Senin–Jumat, pukul 08.00–12.00 WIB. Pendaftaran dibuka setiap tahun ajaran baru.</div>
+    </div>
+  </div>
+</section>
+
+<section id="kontak">
+  <div class="section-label">Hubungi Kami</div>
+  <h2>Butuh Informasi Lebih?</h2>
+  <p class="section-sub">Kami siap membantu Anda. Jangan ragu untuk menghubungi kami kapan saja.</p>
+  <div class="kontak-grid">
+    <div class="kontak-item"><span class="k-icon">📍</span><h5>Alamat</h5><p>Kp. Panggang, Ds. Slapajang,<br>Kec. Cisoka, Kab. Tangerang, Banten 15730</p></div>
+    <div class="kontak-item"><span class="k-icon">📞</span><h5>Telepon / WA</h5><p>0895-3795-20899<br>(Senin–Sabtu, 07.00–14.00)</p></div>
+    <div class="kontak-item"><span class="k-icon">📧</span><h5>Email</h5><p>paudnuruzzulam<br>@gmail.com</p></div>
+    <div class="kontak-item"><span class="k-icon">📱</span><h5>Media Sosial</h5><p>@paudnuruzzulam<br>Instagram &amp; Facebook</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-line"></div>
+  <p>© 2026 <strong>PAUD Nuruzzulam</strong> · Tumbuh Bersama Cahaya Ilmu · Dibuat dengan ❤️</p>
+</footer>
+
+<script>
+function toggleMenu(){
+  const m=document.getElementById('mobileMenu');
+  m.style.display=m.style.display==='flex'?'none':'flex';
+}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+let currentActiveIndex = 0;
+let autoSlideTimer = null;
+
+function update3CardsPositions() {
+  const slides = document.getElementsByClassName("cards-slide-item");
+  const totalSlides = slides.length;
+  if (totalSlides === 0) return;
+  for (let i = 0; i < totalSlides; i++) {
+    slides[i].classList.remove("focus-center", "look-left", "look-right");
+  }
+  let leftIndex = (currentActiveIndex - 1 + totalSlides) % totalSlides;
+  let rightIndex = (currentActiveIndex + 1) % totalSlides;
+  slides[currentActiveIndex].classList.add("focus-center");
+  slides[leftIndex].classList.add("look-left");
+  slides[rightIndex].classList.add("look-right");
+}
+function nextSlide() {
+  const slides = document.getElementsByClassName("cards-slide-item");
+  if (slides.length === 0) return;
+  currentActiveIndex = (currentActiveIndex + 1) % slides.length;
+  update3CardsPositions();
+  resetIntervalTimer();
+}
+function prevSlide() {
+  const slides = document.getElementsByClassName("cards-slide-item");
+  if (slides.length === 0) return;
+  currentActiveIndex = (currentActiveIndex - 1 + slides.length) % slides.length;
+  update3CardsPositions();
+  resetIntervalTimer();
+}
+function clickToSlide(selectedIndex) {
+  if (selectedIndex !== currentActiveIndex) {
+    currentActiveIndex = selectedIndex;
+    update3CardsPositions();
+    resetIntervalTimer();
+  }
+}
+function startIntervalTimer() {
+  if(autoSlideTimer === null) autoSlideTimer = setInterval(nextSlide, 5000);
+}
+function resetIntervalTimer() {
+  if(autoSlideTimer !== null) { clearInterval(autoSlideTimer); autoSlideTimer = null; }
+  startIntervalTimer();
+}
+update3CardsPositions();
+startIntervalTimer();
+</script>
+</body>
+</html>
