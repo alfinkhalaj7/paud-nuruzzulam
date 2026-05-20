@@ -180,10 +180,10 @@ h1 .brand{color:var(--hijau);text-shadow:2px 2px 0 rgba(46,125,50,0.12);}
 .btn-outline{border:2.5px solid var(--hijau);color:var(--hijau);padding:10px 24px;border-radius:40px;font-weight:800;font-size:14px;background:rgba(255,255,255,0.7);transition:all .2s;}
 .btn-outline:hover{background:var(--hijau);color:#fff;}
 
-/* =============== BADGE AKREDITASI RESMI (ANIMASI HIJAU-KUNING) =============== */
+/* =============== BADGE AKREDITASI RESMI - RATA KIRI =============== */
 .hero-stats {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Geser ke kiri sejajar tombol */
   margin-top: 35px;
   flex-wrap: wrap;
 }
@@ -233,7 +233,7 @@ h1 .brand{color:var(--hijau);text-shadow:2px 2px 0 rgba(46,125,50,0.12);}
     justify-content: center;
   }
   .hero-stats {
-    justify-content: center;
+    justify-content: center; /* Di HP, badge tetap di tengah agar proporsional */
   }
   .hero-image-container {
     max-width: 380px;
@@ -417,7 +417,7 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
       <a href="#program" class="btn-outline">Lihat Program</a>
     </div>
     <div class="hero-stats">
-      <!-- Badge Akreditasi Resmi dengan animasi gradasi hijau-kuning -->
+      <!-- Badge Akreditasi Resmi - rata kiri -->
       <div class="stat-badge">TERAKREDITASI RESMI</div>
     </div>
   </div>
