@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>PAUD Nuruzzulam | Pendidikan Anak Usia Dini Berkualitas</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:ital,wght@0,600;1,500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
 :root {
   --oren:       #F57C00;
@@ -170,6 +171,7 @@ nav {
   font-size:13px;font-weight:800;margin-bottom:12px; 
   box-shadow:0 3px 10px rgba(245,124,0,0.3);
 }
+.hero-badge i { font-size: 14px; }
 h1{font-size:clamp(28px,4.5vw,48px);font-weight:900;line-height:1.1;color:var(--hijau);margin-bottom:10px;}
 h1 .welcome{display:block;font-size:clamp(15px,2vw,20px);font-weight:700;color:var(--oren);margin-bottom:4px;}
 h1 .brand{color:var(--hijau);text-shadow:2px 2px 0 rgba(46,125,50,0.12);}
@@ -180,10 +182,10 @@ h1 .brand{color:var(--hijau);text-shadow:2px 2px 0 rgba(46,125,50,0.12);}
 .btn-outline{border:2.5px solid var(--hijau);color:var(--hijau);padding:10px 24px;border-radius:40px;font-weight:800;font-size:14px;background:rgba(255,255,255,0.7);transition:all .2s;}
 .btn-outline:hover{background:var(--hijau);color:#fff;}
 
-/* =============== BADGE AKREDITASI RESMI - RATA KIRI =============== */
+/* =============== BADGE AKREDITASI RESMI =============== */
 .hero-stats {
   display: flex;
-  justify-content: flex-start; /* Geser ke kiri sejajar tombol */
+  justify-content: flex-start;
   margin-top: 35px;
   flex-wrap: wrap;
 }
@@ -233,7 +235,7 @@ h1 .brand{color:var(--hijau);text-shadow:2px 2px 0 rgba(46,125,50,0.12);}
     justify-content: center;
   }
   .hero-stats {
-    justify-content: center; /* Di HP, badge tetap di tengah agar proporsional */
+    justify-content: center;
   }
   .hero-image-container {
     max-width: 380px;
@@ -270,7 +272,7 @@ h2{font-size:clamp(22px,3.5vw,36px);font-weight:900;color:var(--hijau);line-heig
 .tentang-text p{font-size:15px;line-height:1.8;color:var(--abu-teks);margin-bottom:14px;}
 .info-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
 .info-card{background:var(--krem);border:1.5px solid rgba(253,216,53,0.5);border-radius:14px;padding:14px;border-top:3px solid var(--oren);}
-.info-card .ic-icon{font-size:22px;margin-bottom:6px;}
+.info-card .ic-icon{font-size:22px;margin-bottom:6px; color: var(--oren);}
 .info-card h5{font-size:11px;font-weight:800;color:var(--oren);margin-bottom:3px;text-transform:uppercase;}
 .info-card p{font-size:13px;font-weight:700;color:var(--teks);line-height: 1.4;}
 
@@ -282,7 +284,9 @@ h2{font-size:clamp(22px,3.5vw,36px);font-weight:900;color:var(--hijau);line-heig
 .program-card:nth-child(even){border-color:var(--hijau);}
 .program-card:nth-child(3n){border-color:var(--kuning);}
 .program-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,0.12);}
-.pc-icon{font-size:38px;margin-bottom:14px;display:block;}
+.pc-icon{font-size:38px;margin-bottom:14px;display:block;color: var(--oren);}
+.program-card:nth-child(even) .pc-icon { color: var(--hijau-med); }
+.program-card:nth-child(3n) .pc-icon { color: var(--kuning); }
 .program-card h3{font-size:16px;font-weight:800;color:var(--teks);margin-bottom:8px;}
 .program-card p{font-size:13px;line-height:1.6;color:var(--abu-teks);margin-bottom:12px;}
 .program-ornament-bar { display: flex; align-items: center; gap: 6px; margin-top: 15px; padding-top: 10px; border-top: 1px dashed rgba(0,0,0,0.06); }
@@ -314,7 +318,8 @@ h2{font-size:clamp(22px,3.5vw,36px);font-weight:900;color:var(--hijau);line-heig
 .fas-card{ background:var(--putih); border:1.5px solid rgba(253,216,53,0.4); border-radius:18px; padding:24px 18px; text-align: center; transition:box-shadow .2s,transform .2s; border-bottom:3px solid var(--hijau-med); }
 .fas-card:nth-child(even){border-bottom-color:var(--oren);}
 .fas-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
-.fas-icon{font-size:38px;margin-bottom:10px;display:block;text-align:center;}
+.fas-icon{font-size:38px;margin-bottom:10px;display:block;text-align:center; color: var(--oren);}
+.fas-card:nth-child(even) .fas-icon { color: var(--hijau-med); }
 .fas-card h4{font-size:14px;font-weight:800;color:var(--teks);margin-bottom:5px;}
 .fas-card p{font-size:12px;color:var(--abu-teks);line-height:1.5;}
 
@@ -323,6 +328,7 @@ h2{font-size:clamp(22px,3.5vw,36px);font-weight:900;color:var(--hijau);line-heig
 .daftar-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
 .syarat-box{background:var(--putih);border-radius:20px;padding:30px;box-shadow:var(--shadow);border-top:4px solid var(--oren);}
 .syarat-box h3{font-size:19px;font-weight:900;margin-bottom:18px;color:var(--teks);}
+.syarat-box h3 i { margin-right: 10px; color: var(--oren); }
 .syarat-item{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid #f5f5f5;}
 .syarat-item:last-of-type{border:none;}
 .syarat-num{width:30px;height:30px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--oren),var(--kuning));color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;}
@@ -331,9 +337,11 @@ h2{font-size:clamp(22px,3.5vw,36px);font-weight:900;color:var(--hijau);line-heig
 .info-note{background:var(--kuning-muda);border-left:4px solid var(--kuning);border-radius:8px;padding:12px 16px;margin-top:14px;font-size:13px;color:#5D4037;line-height:1.5;}
 .daftar-cta{background:var(--putih);border-radius:20px;padding:30px;box-shadow:var(--shadow);border-top:4px solid var(--hijau);display:flex;flex-direction:column;gap:18px;}
 .daftar-cta h3{font-size:19px;font-weight:900;color:var(--teks);}
+.daftar-cta h3 i { margin-right: 10px; color: var(--hijau); }
 .daftar-cta>div>p{font-size:14px;line-height:1.7;color:var(--abu-teks);}
 .cta-cara{background:linear-gradient(135deg,var(--hijau-muda),var(--oren-muda));border-radius:14px;padding:18px 20px;}
 .cta-cara h4{font-size:13px;font-weight:800;color:var(--hijau);margin-bottom:13px;text-transform:uppercase;}
+.cta-cara h4 i { margin-right: 8px; }
 .cta-langkah{display:flex;align-items:flex-start;gap:11px;margin-bottom:11px;}
 .cta-langkah:last-child{margin-bottom:0;}
 .cl-num{width:26px;height:26px;border-radius:50%;flex-shrink:0;background:var(--hijau);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;}
@@ -341,8 +349,10 @@ h2{font-size:clamp(22px,3.5vw,36px);font-weight:900;color:var(--hijau);line-heig
 .cta-btns{display:flex;flex-direction:column;gap:10px;}
 .btn-wa{display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;padding:14px 20px;border-radius:12px;font-weight:800;font-size:14px;transition:opacity .2s;}
 .btn-wa:hover{opacity:.88;}
+.btn-wa i { font-size: 20px; }
 .btn-datang{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--oren),#E65100);color:#fff;padding:14px 20px;border-radius:12px;font-weight:800;font-size:14px;transition:opacity .2s;}
 .btn-datang:hover{opacity:.88;}
+.btn-datang i { font-size: 18px; }
 
 /* KONTAK */
 #kontak{background:linear-gradient(135deg,var(--hijau) 0%,var(--hijau-med) 50%,var(--oren) 100%);color:#fff;}
@@ -352,7 +362,7 @@ h2{font-size:clamp(22px,3.5vw,36px);font-weight:900;color:var(--hijau);line-heig
 .kontak-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;}
 .kontak-item{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:22px;text-align:center;transition:background .2s;}
 .kontak-item:hover{background:rgba(255,255,255,0.2);}
-.kontak-item .k-icon{font-size:30px;margin-bottom:10px;display:block;}
+.kontak-item .k-icon{font-size:30px;margin-bottom:10px;display:block; color: var(--kuning);}
 .kontak-item h5{font-size:11px;font-weight:800;color:var(--kuning);margin-bottom:5px;text-transform:uppercase;}
 .kontak-item p{font-size:14px;font-weight:700;color:#fff;line-height:1.5;}
 
@@ -406,19 +416,18 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
   <div class="hero-blob3"></div>
   
   <div class="hero-content">
-    <div class="hero-badge">🌟 Penerimaan Murid Baru 2026/2027</div>
+    <div class="hero-badge"><i class="fas fa-star"></i> Penerimaan Murid Baru 2026/2027</div>
     <h1>
       <span class="welcome">Selamat Datang di</span>
       <span class="brand">PAUD<br>NURUZZULAM</span>
     </h1>
-    <p>Lembaga pendidikan anak usia dini berbasis islami yang membimbing si kecil tumbuh cerdas, berkarakter, and bahagia sejak dini.</p>
+    <p>Lembaga pendidikan anak usia dini berbasis islami yang membimbing si kecil tumbuh cerdas, berkarakter, dan bahagia sejak dini.</p>
     <div class="hero-btns">
-      <a href="#pendaftaran" class="btn-primary">Daftar Sekarang 🎉</a>
-      <a href="#program" class="btn-outline">Lihat Program</a>
+      <a href="#pendaftaran" class="btn-primary"><i class="fas fa-graduation-cap"></i> Daftar Sekarang</a>
+      <a href="#program" class="btn-outline"><i class="fas fa-book-open"></i> Lihat Program</a>
     </div>
     <div class="hero-stats">
-      <!-- Badge Akreditasi Resmi - rata kiri -->
-      <div class="stat-badge">TERAKREDITASI RESMI</div>
+      <div class="stat-badge"><i class="fas fa-check-circle"></i> TERAKREDITASI RESMI</div>
     </div>
   </div>
 
@@ -431,11 +440,11 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
   <div class="tentang-grid">
     <div class="tentang-visual">
       <div class="visi-misi">
-        <h4>🎯 Visi Asli</h4>
+        <h4><i class="fas fa-bullseye"></i> Visi Asli</h4>
         <p>MEMBENTUK ANAK YANG CERDAS, BAIK DAN TERAMPIL BERAKHLAK MULIA, SEHINGGA TERWUJUD ANAK YANG KREATIF DAN MANDIRI.</p>
       </div>
       <div class="visi-misi misi">
-        <h4>🚀 Misi Asli</h4>
+        <h4><i class="fas fa-rocket"></i> Misi Asli</h4>
         <ul>
           <li>Melaksanakan pembelajaran aktif, kreatif, efektif dan inovatif.</li>
           <li>Meningkatkan pelayanan dan pemerataan akses layanan PAUD melalui penyelenggara yang mudah, dan murah, tetapi bermutu.</li>
@@ -447,13 +456,13 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
         </ul>
       </div>
       <div>
-        <p style="font-size:13px;font-weight:800;color:var(--oren);margin-bottom:8px;text-transform:uppercase;">Nilai-Nilai Kami</p>
+        <p style="font-size:13px;font-weight:800;color:var(--oren);margin-bottom:8px;text-transform:uppercase;"><i class="fas fa-heart"></i> Nilai-Nilai Kami</p>
         <div class="nilai-list">
-          <span class="nilai-tag">Islami</span>
-          <span class="nilai-tag">Kreatif</span>
-          <span class="nilai-tag">Kasih Sayang</span>
-          <span class="nilai-tag">Menyenangkan</span>
-          <span class="nilai-tag">Holistik</span>
+          <span class="nilai-tag"><i class="fas fa-mosque"></i> Islami</span>
+          <span class="nilai-tag"><i class="fas fa-lightbulb"></i> Kreatif</span>
+          <span class="nilai-tag"><i class="fas fa-hand-holding-heart"></i> Kasih Sayang</span>
+          <span class="nilai-tag"><i class="fas fa-smile"></i> Menyenangkan</span>
+          <span class="nilai-tag"><i class="fas fa-seedling"></i> Holistik</span>
         </div>
       </div>
     </div>
@@ -461,25 +470,25 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
       <div class="section-label">Tentang Kami</div>
       <h2>Mengenal PAUD Nuruzzulam</h2>
       <p>PAUD Nuruzzulam adalah lembaga pendidikan anak usia dini resmi yang berkomitmen memberikan pendidikan awal berkualitas tinggi berbasis nilai-nilai islami. Dengan pengalaman lebih dari 6 tahun, kami terus berinovasi dalam metode pembelajaran yang menyenangkan dan penuh kasih sayang.</p>
-      <p>Kami percaya bahwa setiap anak adalah cahaya benderang yang perlu dibimbing dengan penuh kasih sayang. Dengan mengedepankan atmosfer belajar yang murah, bermutu, and menyenangkan, kami berkomitmen membantu setiap peserta didik mengoptimalkan potensi dirinya.</p>
+      <p>Kami percaya bahwa setiap anak adalah cahaya benderang yang perlu dibimbing dengan penuh kasih sayang. Dengan mengedepankan atmosfer belajar yang murah, bermutu, dan menyenangkan, kami berkomitmen membantu setiap peserta didik mengoptimalkan potensi dirinya.</p>
       <div class="info-cards">
         <div class="info-card">
-          <div class="ic-icon">📍</div>
+          <div class="ic-icon"><i class="fas fa-map-marker-alt"></i></div>
           <h5>Alamat</h5>
           <p>Kp. Panggang, Ds. Slapajang, Kec. Cisoka, Kab. Tangerang, Banten 15730</p>
         </div>
         <div class="info-card">
-          <div class="ic-icon">🕐</div>
+          <div class="ic-icon"><i class="far fa-clock"></i></div>
           <h5>Jam Belajar</h5>
           <p>Senin–Jumat, 08.00–10.00 WIB</p>
         </div>
         <div class="info-card">
-          <div class="ic-icon">📞</div>
+          <div class="ic-icon"><i class="fas fa-phone-alt"></i></div>
           <h5>Telepon</h5>
           <p>0895-3795-20899</p>
         </div>
         <div class="info-card">
-          <div class="ic-icon">🎓</div>
+          <div class="ic-icon"><i class="fas fa-medal"></i></div>
           <h5>Akreditasi</h5>
           <p>Terakreditasi Resmi</p>
         </div>
@@ -493,14 +502,14 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
   <h2>Apa yang Kami Ajarkan?</h2>
   <p class="section-sub">Program kami dirancang untuk mengembangkan potensi anak secara menyeluruh — dari kecerdasan kognitif, emosional, hingga spiritual.</p>
   <div class="program-grid">
-    <div class="program-card"><span class="pc-icon">📖</span><h3>Al-Qur'an &amp; Doa Harian</h3><p>Pengenalan huruf hijaiyah, hafalan surat-surat pendek, serta doa-doa harian esensial dasar.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
-    <div class="program-card"><span class="pc-icon">🎨</span><h3>Kreativitas &amp; Seni</h3><p>Menggambar, mewarnai, kerajinan tangan, and berbagai kegiatan seni tangan yang merangsang imajinasi.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
-    <div class="program-card"><span class="pc-icon">🔤</span><h3>Calistung Dasar</h3><p>Belajar membaca, menulis, and berhitung secara menyenangkan sebagai bekal persiapan masuk SD.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
-    <div class="program-card"><span class="pc-icon">🏃</span><h3>Motorik &amp; Olahraga</h3><p>Senam pagi, permainan outdoor, and aktivitas fisik interaktif yang melatih kelenturan tubuh.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
-    <div class="program-card"><span class="pc-icon">🤝</span><h3>Sosial &amp; Karakter</h3><p>Membangun nilai-nilai kebaikan adab, sopan santun, percaya diri, and keluwesan bersosialisasi.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
-    <div class="program-card"><span class="pc-icon">🔬</span><h3>Sains &amp; Eksplorasi</h3><p>Mengenal alam sekitar melalui metode percobaan eksperimen ilmiah sederhana yang seru.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
-    <div class="program-card"><span class="pc-icon">🎵</span><h3>Kelas Seni Musik</h3><p>Mengenalkan berbagai macam lagu anak-anak edukatif serta pengenalan ketukan ritme alat musik sederhana.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
-    <div class="program-card"><span class="pc-icon">🍳</span><h3>Fun Cooking (Masak)</h3><p>Menumbuhkan motorik halus agar mandiri meracik menu makanan / minuman sehat konsumsi harian secara sederhana.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><div class="pc-icon"><i class="fas fa-quran"></i></div><h3>Al-Qur'an &amp; Doa Harian</h3><p>Pengenalan huruf hijaiyah, hafalan surat-surat pendek, serta doa-doa harian esensial dasar.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><div class="pc-icon"><i class="fas fa-paint-brush"></i></div><h3>Kreativitas &amp; Seni</h3><p>Menggambar, mewarnai, kerajinan tangan, dan berbagai kegiatan seni tangan yang merangsang imajinasi.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><div class="pc-icon"><i class="fas fa-book"></i></div><h3>Calistung Dasar</h3><p>Belajar membaca, menulis, dan berhitung secara menyenangkan sebagai bekal persiapan masuk SD.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><div class="pc-icon"><i class="fas fa-running"></i></div><h3>Motorik &amp; Olahraga</h3><p>Senam pagi, permainan outdoor, dan aktivitas fisik interaktif yang melatih kelenturan tubuh.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><div class="pc-icon"><i class="fas fa-handshake"></i></div><h3>Sosial &amp; Karakter</h3><p>Membangun nilai-nilai kebaikan adab, sopan santun, percaya diri, dan keluwesan bersosialisasi.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><div class="pc-icon"><i class="fas fa-microscope"></i></div><h3>Sains &amp; Eksplorasi</h3><p>Mengenal alam sekitar melalui metode percobaan eksperimen ilmiah sederhana yang seru.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><div class="pc-icon"><i class="fas fa-music"></i></div><h3>Kelas Seni Musik</h3><p>Mengenalkan berbagai macam lagu anak-anak edukatif serta pengenalan ketukan ritme alat musik sederhana.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
+    <div class="program-card"><div class="pc-icon"><i class="fas fa-utensils"></i></div><h3>Fun Cooking (Masak)</h3><p>Menumbuhkan motorik halus agar mandiri meracik menu makanan / minuman sehat konsumsi harian secara sederhana.</p><div class="program-ornament-bar"><span class="ornament-dot"></span><span class="ornament-dot"></span><span class="ornament-dot"></span></div></div>
   </div>
 </section>
 
@@ -509,29 +518,29 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
   <h2>Keseruan Kegiatan di PAUD</h2>
   <p class="section-sub text-center-sub">Intip yuk berbagai momen keceriaan, belajar, dan eksplorasi seru siswa-siswi PAUD Nuruzzulam!</p>
   <div class="carousel-view-container">
-    <div class="cards-slide-item" onclick="clickToSlide(0)"><img src="kelas.png" alt="Belajar di Kelas" onerror="this.src='https://placehold.co/850x480?text=Suasana+Belajar+di+Kelas';"><div class="cards-caption">📝 Aktivitas Belajar di Kelas yang Interaktif dan Menyenangkan</div></div>
-    <div class="cards-slide-item" onclick="clickToSlide(1)"><img src="senam.png" alt="Senam Pagi" onerror="this.src='https://placehold.co/850x480?text=Senam+Pagi+Ceria';"><div class="cards-caption">🏃 Senam Pagi Ceria Menjaga Kebugaran Tubuh Si Kecil</div></div>
-    <div class="cards-slide-item" onclick="clickToSlide(2)"><img src="gedung-lapangan.png" alt="Gedung Sekolah dan Lapangan" onerror="this.src='https://placehold.co/850x480?text=Gedung+Sekolah+dan+Lapangan';"><div class="cards-caption">🏫 Fasilitas Gedung Sekolah dan Lapangan Luas yang Nyaman</div></div>
-    <div class="cards-slide-item" onclick="clickToSlide(3)"><img src="kelulusan.png" alt="Wisuda Kelulusan" onerror="this.src='https://placehold.co/850x480?text=Wisuda+Kelulusan+PAUD';"><div class="cards-caption">🎓 Momen Wisuda Kelulusan, Kebanggaan Orang Tua dan Guru</div></div>
-    <div class="cards-slide-item" onclick="clickToSlide(4)"><img src="menari.png" alt="Kegiatan Menari" onerror="this.src='https://placehold.co/850x480?text=Kegiatan+Menari+Bersama';"><div class="cards-caption">💃 Kegiatan Menari, Ekspresi Seni dan Kegembiraan Anak</div></div>
+    <div class="cards-slide-item" onclick="clickToSlide(0)"><img src="kelas.png" alt="Belajar di Kelas" onerror="this.src='https://placehold.co/850x480?text=Suasana+Belajar+di+Kelas';"><div class="cards-caption"><i class="fas fa-chalkboard-teacher"></i> Aktivitas Belajar di Kelas yang Interaktif dan Menyenangkan</div></div>
+    <div class="cards-slide-item" onclick="clickToSlide(1)"><img src="senam.png" alt="Senam Pagi" onerror="this.src='https://placehold.co/850x480?text=Senam+Pagi+Ceria';"><div class="cards-caption"><i class="fas fa-child"></i> Senam Pagi Ceria Menjaga Kebugaran Tubuh Si Kecil</div></div>
+    <div class="cards-slide-item" onclick="clickToSlide(2)"><img src="gedung-lapangan.png" alt="Gedung Sekolah dan Lapangan" onerror="this.src='https://placehold.co/850x480?text=Gedung+Sekolah+dan+Lapangan';"><div class="cards-caption"><i class="fas fa-school"></i> Fasilitas Gedung Sekolah dan Lapangan Luas yang Nyaman</div></div>
+    <div class="cards-slide-item" onclick="clickToSlide(3)"><img src="kelulusan.png" alt="Wisuda Kelulusan" onerror="this.src='https://placehold.co/850x480?text=Wisuda+Kelulusan+PAUD';"><div class="cards-caption"><i class="fas fa-graduation-cap"></i> Momen Wisuda Kelulusan, Kebanggaan Orang Tua dan Guru</div></div>
+    <div class="cards-slide-item" onclick="clickToSlide(4)"><img src="menari.png" alt="Kegiatan Menari" onerror="this.src='https://placehold.co/850x480?text=Kegiatan+Menari+Bersama';"><div class="cards-caption"><i class="fas fa-music"></i> Kegiatan Menari, Ekspresi Seni dan Kegembiraan Anak</div></div>
   </div>
-  <div class="carousel-controls-panel"><button class="arrow-nav-btn" onclick="prevSlide()">&lt;</button><button class="arrow-nav-btn" onclick="nextSlide()">&gt;</button></div>
+  <div class="carousel-controls-panel"><button class="arrow-nav-btn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button><button class="arrow-nav-btn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button></div>
 </section>
 
 <section id="fasilitas">
   <div class="section-label">Fasilitas</div>
   <h2>Sarana &amp; Prasarana</h2>
-  <p class="section-sub">Kami menyediakan lingkungan belajar yang aman, nyaman, bersih, and menyenangkan untuk mendukung tumbuh kembang si kecil.</p>
+  <p class="section-sub">Kami menyediakan lingkungan belajar yang aman, nyaman, bersih, dan menyenangkan untuk mendukung tumbuh kembang si kecil.</p>
   <div class="fasilitas-grid">
-    <div class="fas-card"><span class="fas-icon">✨</span><h4>Ruang Kelas Luas</h4><p>Ruang belajar yang luas, ber-AC, bersih, and didekorasi ceria agar anak nyaman bergerak.</p></div>
-    <div class="fas-card"><span class="fas-icon">🛝</span><h4>Area Bermain Outdoor</h4><p>Taman bermain luar ruangan dengan berbagai permainan edukatif yang aman.</p></div>
-    <div class="fas-card"><span class="fas-icon">📚</span><h4>Perpustakaan Mini</h4><p>Koleksi buku cerita, buku ilmu pengetahuan, and media belajar menarik.</p></div>
-    <div class="fas-card"><span class="fas-icon">🕌</span><h4>Mushola</h4><p>Tempat ibadah yang bersih untuk pembiasaan shalat and mengaji.</p></div>
-    <div class="fas-card"><span class="fas-icon">🛍️</span><h4>Jajanan Anak &amp; Alat Tulis</h4><p>Menyediakan camilan sehat bergizi and kebutuhan alat tulis harian siswa secara praktis.</p></div>
-    <div class="fas-card"><span class="fas-icon">🚿</span><h4>Toilet Ramah Anak</h4><p>Toilet khusus anak-anak yang bersih, aman, and mudah digunakan.</p></div>
-    <div class="fas-card"><span class="fas-icon">🎭</span><h4>Panggung Pentas Seni</h4><p>Fasilitas panggung ekspresi mandiri untuk melatih bakat, kreativitas, and rasa percaya diri anak.</p></div>
-    <div class="fas-card"><span class="fas-icon">🛡️</span><h4>Lingkungan Aman &amp; Tenang</h4><p>Area sekolah asri and jauh dari jalan raya utama, menjamin kenyamanan and keselamatan anak.</p></div>
-    <div class="fas-card"><span class="fas-icon">🚗</span><h4>Halaman &amp; Parkir Luas</h4><p>Area halaman and tempat parkir kendaraan yang sangat luas untuk kenyamanan antar-jemput.</p></div>
+    <div class="fas-card"><div class="fas-icon"><i class="fas fa-chalkboard"></i></div><h4>Ruang Kelas Luas</h4><p>Ruang belajar yang luas, ber-AC, bersih, dan didekorasi ceria agar anak nyaman bergerak.</p></div>
+    <div class="fas-card"><div class="fas-icon"><i class="fas fa-tree"></i></div><h4>Area Bermain Outdoor</h4><p>Taman bermain luar ruangan dengan berbagai permainan edukatif yang aman.</p></div>
+    <div class="fas-card"><div class="fas-icon"><i class="fas fa-book-reader"></i></div><h4>Perpustakaan Mini</h4><p>Koleksi buku cerita, buku ilmu pengetahuan, dan media belajar menarik.</p></div>
+    <div class="fas-card"><div class="fas-icon"><i class="fas fa-mosque"></i></div><h4>Mushola</h4><p>Tempat ibadah yang bersih untuk pembiasaan shalat dan mengaji.</p></div>
+    <div class="fas-card"><div class="fas-icon"><i class="fas fa-apple-alt"></i></div><h4>Jajanan Anak &amp; Alat Tulis</h4><p>Menyediakan camilan sehat bergizi dan kebutuhan alat tulis harian siswa secara praktis.</p></div>
+    <div class="fas-card"><div class="fas-icon"><i class="fas fa-toilet"></i></div><h4>Toilet Ramah Anak</h4><p>Toilet khusus anak-anak yang bersih, aman, dan mudah digunakan.</p></div>
+    <div class="fas-card"><div class="fas-icon"><i class="fas fa-theater-masks"></i></div><h4>Panggung Pentas Seni</h4><p>Fasilitas panggung ekspresi mandiri untuk melatih bakat, kreativitas, dan rasa percaya diri anak.</p></div>
+    <div class="fas-card"><div class="fas-icon"><i class="fas fa-shield-alt"></i></div><h4>Lingkungan Aman &amp; Tenang</h4><p>Area sekolah asri dan jauh dari jalan raya utama, menjamin kenyamanan dan keselamatan anak.</p></div>
+    <div class="fas-card"><div class="fas-icon"><i class="fas fa-parking"></i></div><h4>Halaman &amp; Parkir Luas</h4><p>Area halaman dan tempat parkir kendaraan yang sangat luas untuk kenyamanan antar-jemput.</p></div>
   </div>
 </section>
 
@@ -541,25 +550,25 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
   <p class="section-sub">Siapkan dokumen persyaratan di bawah ini, lalu datang langsung ke sekolah atau hubungi admin kami untuk informasi lebih lanjut.</p>
   <div class="daftar-wrapper">
     <div class="syarat-box">
-      <h3>📋 Syarat Pendaftaran</h3>
-      <div class="syarat-item"><div class="syarat-num">1</div><div><h5>Fotokopi Kartu Keluarga (KK)</h5><p>Fotokopi yang masih jelas and terbaca, 1 lembar.</p></div></div>
-      <div class="syarat-item"><div class="syarat-num">2</div><div><h5>Fotokopi KTP Orang Tua/Wali</h5><p>KTP ayah and ibu/wali yang masih berlaku, masing-masing 1 lembar.</p></div></div>
+      <h3><i class="fas fa-clipboard-list"></i> Syarat Pendaftaran</h3>
+      <div class="syarat-item"><div class="syarat-num">1</div><div><h5>Fotokopi Kartu Keluarga (KK)</h5><p>Fotokopi yang masih jelas dan terbaca, 1 lembar.</p></div></div>
+      <div class="syarat-item"><div class="syarat-num">2</div><div><h5>Fotokopi KTP Orang Tua/Wali</h5><p>KTP ayah dan ibu/wali yang masih berlaku, masing-masing 1 lembar.</p></div></div>
       <div class="syarat-item"><div class="syarat-num">3</div><div><h5>Fotokopi Akta Kelahiran Anak</h5><p>Akta kelahiran asli untuk ditunjukkan, fotokopi 1 lembar.</p></div></div>
-      <div class="info-note">💡 <strong>Catatan:</strong> Semua berkas asli harap dibawa saat datang ke sekolah untuk proses verifikasi dokumen.</div>
+      <div class="info-note"><i class="fas fa-info-circle"></i> <strong>Catatan:</strong> Semua berkas asli harap dibawa saat datang ke sekolah untuk proses verifikasi dokumen.</div>
     </div>
     <div class="daftar-cta">
-      <div><h3>🏫 Selanjutnya, Apa yang Harus Dilakukan?</h3><p>Setelah menyiapkan dokumen di samping, Anda bisa langsung datang ke sekolah atau menghubungi admin kami terlebih dahulu untuk konfirmasi jadwal pendaftaran.</p></div>
-      <div class="cta-cara"><h4>📌 Langkah Pendaftaran</h4>
+      <div><h3><i class="fas fa-school"></i> Selanjutnya, Apa yang Harus Dilakukan?</h3><p>Setelah menyiapkan dokumen di samping, Anda bisa langsung datang ke sekolah atau menghubungi admin kami terlebih dahulu untuk konfirmasi jadwal pendaftaran.</p></div>
+      <div class="cta-cara"><h4><i class="fas fa-list-ol"></i> Langkah Pendaftaran</h4>
         <div class="cta-langkah"><div class="cl-num">1</div><p>Siapkan semua dokumen persyaratan yang tertera di sebelah kiri.</p></div>
         <div class="cta-langkah"><div class="cl-num">2</div><p>Hubungi admin sekolah via WhatsApp atau telepon untuk konfirmasi jadwal.</p></div>
         <div class="cta-langkah"><div class="cl-num">3</div><p>Datang langsung ke sekolah pada jadwal yang telah disepakati.</p></div>
-        <div class="cta-langkah"><div class="cl-num">4</div><p>Serahkan berkas and isi formulir pendaftaran di kantor sekolah.</p></div>
+        <div class="cta-langkah"><div class="cl-num">4</div><p>Serahkan berkas dan isi formulir pendaftaran di kantor sekolah.</p></div>
       </div>
       <div class="cta-btns">
-        <a href="https://wa.me/62895379520899" class="btn-wa" target="_blank"><span style="font-size:20px;">💬</span> Hubungi Admin via WhatsApp</a>
-        <a href="https://maps.app.goo.gl/T2A3BguCbkbLsP21A?g_st=aw" class="btn-datang" target="_blank"><span style="font-size:20px;">🏫</span> Lihat Lokasi Sekolah</a>
+        <a href="https://wa.me/62895379520899" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Hubungi Admin via WhatsApp</a>
+        <a href="https://maps.app.goo.gl/T2A3BguCbkbLsP21A?g_st=aw" class="btn-datang" target="_blank"><i class="fas fa-map-marker-alt"></i> Lihat Lokasi Sekolah</a>
       </div>
-      <div class="info-note">💡 <strong>Jam Pendaftaran:</strong> Senin–Jumat, pukul 08.00–12.00 WIB. Pendaftaran dibuka setiap tahun ajaran baru.</div>
+      <div class="info-note"><i class="fas fa-clock"></i> <strong>Jam Pendaftaran:</strong> Senin–Jumat, pukul 08.00–12.00 WIB. Pendaftaran dibuka setiap tahun ajaran baru.</div>
     </div>
   </div>
 </section>
@@ -569,16 +578,16 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
   <h2>Butuh Informasi Lebih?</h2>
   <p class="section-sub">Kami siap membantu Anda. Jangan ragu untuk menghubungi kami kapan saja.</p>
   <div class="kontak-grid">
-    <div class="kontak-item"><span class="k-icon">📍</span><h5>Alamat</h5><p>Kp. Panggang, Ds. Slapajang,<br>Kec. Cisoka, Kab. Tangerang, Banten 15730</p></div>
-    <div class="kontak-item"><span class="k-icon">📞</span><h5>Telepon / WA</h5><p>0895-3795-20899<br>(Senin–Sabtu, 07.00–14.00)</p></div>
-    <div class="kontak-item"><span class="k-icon">📧</span><h5>Email</h5><p>paudnuruzzulam<br>@gmail.com</p></div>
-    <div class="kontak-item"><span class="k-icon">📱</span><h5>Media Sosial</h5><p>@paudnuruzzulam<br>Instagram &amp; Facebook</p></div>
+    <div class="kontak-item"><div class="k-icon"><i class="fas fa-map-marker-alt"></i></div><h5>Alamat</h5><p>Kp. Panggang, Ds. Slapajang,<br>Kec. Cisoka, Kab. Tangerang, Banten 15730</p></div>
+    <div class="kontak-item"><div class="k-icon"><i class="fas fa-phone-alt"></i></div><h5>Telepon / WA</h5><p>0895-3795-20899<br>(Senin–Sabtu, 07.00–14.00)</p></div>
+    <div class="kontak-item"><div class="k-icon"><i class="fas fa-envelope"></i></div><h5>Email</h5><p>paudnuruzzulam<br>@gmail.com</p></div>
+    <div class="kontak-item"><div class="k-icon"><i class="fab fa-instagram"></i></div><h5>Media Sosial</h5><p>@paudnuruzzulam<br>Instagram &amp; Facebook</p></div>
   </div>
 </section>
 
 <footer>
   <div class="f-line"></div>
-  <p>© 2026 <strong>PAUD Nuruzzulam</strong> · Tumbuh Bersama Cahaya Ilmu · Dibuat dengan ❤️</p>
+  <p>© 2026 <strong>PAUD Nuruzzulam</strong> · Tumbuh Bersama Cahaya Ilmu · Dibuat dengan <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
 </footer>
 
 <script>
