@@ -576,6 +576,32 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
   section{padding:60px 5%;}
 }
 @media(max-width:480px){ .info-cards{grid-template-columns:1fr;} .kontak-grid{grid-template-columns:1fr;} }
+
+/* Tombol Download Formulir */
+.btn-download-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #FDD835, #F57C00);
+  color: #1B5E20;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 14px 28px;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(245,124,0,0.4);
+  border: none;
+  cursor: pointer;
+}
+.btn-download-form i {
+  font-size: 20px;
+}
+.btn-download-form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 22px rgba(245,124,0,0.5);
+  background: linear-gradient(135deg, #FBC02D, #EF6C00);
+}
 </style>
 </head>
 <body>
@@ -706,21 +732,31 @@ footer .f-line{width:60px;height:3px;background:linear-gradient(90deg,var(--kuni
 <section id="pendaftaran">
   <div class="section-label">Pendaftaran</div>
   <h2>Cara Mendaftar</h2>
-  <p class="section-sub">Siapkan dokumen persyaratan di bawah ini, lalu datang langsung ke sekolah atau hubungi admin kami untuk informasi lebih lanjut.</p>
+  <p class="section-sub">Siapkan dokumen persyaratan di bawah ini. Anda juga dapat <strong>mengunduh formulir pendaftaran</strong> untuk diisi terlebih dahulu. Kemudian datang langsung ke sekolah atau hubungi admin kami untuk informasi lebih lanjut.</p>
   <div class="daftar-wrapper">
-    <div class="syarat-box"><h3><i class="fas fa-clipboard-list"></i> Syarat Pendaftaran</h3>
+    <div class="syarat-box">
+      <h3><i class="fas fa-clipboard-list"></i> Syarat Pendaftaran</h3>
       <div class="syarat-item"><div class="syarat-num">1</div><div><h5>Fotokopi Kartu Keluarga (KK)</h5><p>Fotokopi yang masih jelas dan terbaca, 1 lembar.</p></div></div>
       <div class="syarat-item"><div class="syarat-num">2</div><div><h5>Fotokopi KTP Orang Tua/Wali</h5><p>KTP ayah dan ibu/wali yang masih berlaku, masing-masing 1 lembar.</p></div></div>
       <div class="syarat-item"><div class="syarat-num">3</div><div><h5>Fotokopi Akta Kelahiran Anak</h5><p>Akta kelahiran asli untuk ditunjukkan, fotokopi 1 lembar.</p></div></div>
       <div class="info-note"><i class="fas fa-info-circle"></i> <strong>Catatan:</strong> Semua berkas asli harap dibawa saat datang ke sekolah untuk proses verifikasi dokumen.</div>
+      
+      <!-- TOMBOL DOWNLOAD FORMULIR PDF (mencolok & senada) -->
+      <div style="margin-top: 28px; text-align: center;">
+        <a href="Formulir_PPDB_KBNuruzzulam_2026-2027.pdf" download class="btn-download-form">
+          <i class="fas fa-file-download"></i> Download Formulir Pendaftaran (PDF)
+        </a>
+      </div>
     </div>
+
     <div class="daftar-cta">
-      <div><h3><i class="fas fa-school"></i> Selanjutnya, Apa yang Harus Dilakukan?</h3><p>Setelah menyiapkan dokumen di samping, Anda bisa langsung datang ke sekolah atau menghubungi admin kami terlebih dahulu untuk konfirmasi jadwal pendaftaran.</p></div>
+      <div><h3><i class="fas fa-school"></i> Selanjutnya, Apa yang Harus Dilakukan?</h3><p>Setelah menyiapkan dokumen dan mengisi formulir, Anda bisa langsung datang ke sekolah atau menghubungi admin kami terlebih dahulu untuk konfirmasi jadwal pendaftaran.</p></div>
       <div class="cta-cara"><h4><i class="fas fa-list-ol"></i> Langkah Pendaftaran</h4>
         <div class="cta-langkah"><div class="cl-num">1</div><p>Siapkan semua dokumen persyaratan yang tertera di sebelah kiri.</p></div>
-        <div class="cta-langkah"><div class="cl-num">2</div><p>Hubungi admin sekolah via WhatsApp atau telepon untuk konfirmasi jadwal.</p></div>
-        <div class="cta-langkah"><div class="cl-num">3</div><p>Datang langsung ke sekolah pada jadwal yang telah disepakati.</p></div>
-        <div class="cta-langkah"><div class="cl-num">4</div><p>Serahkan berkas dan isi formulir pendaftaran di kantor sekolah.</p></div>
+        <div class="cta-langkah"><div class="cl-num">2</div><p><strong>Download dan isi formulir pendaftaran</strong> (klik tombol di bawah).</p></div>
+        <div class="cta-langkah"><div class="cl-num">3</div><p>Hubungi admin sekolah via WhatsApp atau telepon untuk konfirmasi jadwal.</p></div>
+        <div class="cta-langkah"><div class="cl-num">4</div><p>Datang langsung ke sekolah pada jadwal yang telah disepakati, bawa berkas lengkap + formulir yang sudah diisi.</p></div>
+        <div class="cta-langkah"><div class="cl-num">5</div><p>Serahkan berkas dan isi formulir tambahan (jika diperlukan) di kantor sekolah.</p></div>
       </div>
       <div class="cta-btns"><a href="https://wa.me/62895379520899" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Hubungi Admin via WhatsApp</a><a href="https://maps.app.goo.gl/T2A3BguCbkbLsP21A?g_st=aw" class="btn-datang" target="_blank"><i class="fas fa-map-marker-alt"></i> Lihat Lokasi Sekolah</a></div>
       <div class="info-note"><i class="fas fa-clock"></i> <strong>Jam Pendaftaran:</strong> Senin–Jumat, pukul 08.00–12.00 WIB. Pendaftaran dibuka setiap tahun ajaran baru.</div>
